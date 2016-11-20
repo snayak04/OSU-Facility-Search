@@ -78,7 +78,7 @@ else
         unset( $_SESSION['form_token'] );
 
         /*** if all is done, say thanks ***/
-        $message = '<meta http-equiv="Refresh" content="2; url="http://www.crediblesystem.com/hackathon2016/login.php">New user added';
+        $message = '<meta http-equiv="Refresh" content="2;url=http://www.crediblesystem.com/hackathon2016/login.php">New user added';
     }
     catch(Exception $e)
     {

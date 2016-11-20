@@ -91,7 +91,7 @@ else
                 $_SESSION['user_id'] = $user_id;
 
                 /*** tell the user we are logged in ***/
-                $message = '<meta http-equiv="Refresh" content="2; url="http://www.crediblesystem.com/hackathon2016">You are now logged in';
+                $message = '<meta http-equiv="Refresh" content="2;url=http://www.crediblesystem.com/hackathon2016">You are now logged in';
         }
 
 

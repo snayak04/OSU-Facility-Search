@@ -9,10 +9,7 @@ a {
 	color: #2A679F;
 }
 /*========*/
-img{
-	height:60%;
-	width:70%;
-}
+
 .form-wrapper {
 	background-color: #f6f6f6;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
@@ -109,12 +106,27 @@ img{
 	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
 	outline: 0;
-}
-.login{
-	margin-left:80%;
+}  
+a.login{
+	position:relative;
+	float:right;
 	font-size: 14px;
+	margin-right:2em;
 }
-
+.alogin{
+	position:relative;
+	float:right;
+	font-size: 14px;
+	margin-right:2em;
+}
 .form-wrapper #submit::-moz-focus-inner {
 	border: 0;
+}
+img{
+	float:center;
+	margin-top:5%;
+	margin-left:9%;
+	margin-bottom:-3%;
+	width:40%;
+	height:20%;
 }

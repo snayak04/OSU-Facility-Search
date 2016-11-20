@@ -39,7 +39,7 @@ echo "Wrong Confirmation code";
 // if successfully moved data from table"saiinfot_temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "saiinfot_temp_members_db"
 if($result2){
 
-echo "<meta http-equiv=\"Refresh\" content=\"5; url=\"http://www.crediblesystem.com/hackathon2016/registration.html\"><br/>Your account has been activated";
+echo "<meta http-equiv=\"Refresh\" content=\"5;url=http://www.crediblesystem.com/hackathon2016/registration.html\"><br/>Your account has been activated";
 
 // Delete information of this user from table "saiinfot_temp_members_db" that has this passkey 
 $sql3="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";

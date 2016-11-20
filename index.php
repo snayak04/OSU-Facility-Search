@@ -5,7 +5,7 @@ session_start();
 
 if(!isset($_SESSION['user_id']))
 {
-    $message = '<a class ="login" href="registration.php">Register</a> <a class ="login" href="login.php"> Login</a>';
+    $message = '<a class = "login" href="registration.php">Register </a>   <a class ="login" href="login.php"> Login</a>';
 }
 else
 {
@@ -48,17 +48,17 @@ else
         /*** if we have no something is wrong ***/
         if($phpro_username == false)
         {
-            $message = '<a class ="login" href="registration.php">Register</a>  <a class ="login" href="login.php"> Login</a>';
+            $message = '<a class ="login" href="registration.php">Register </a>  <a class ="login" href="login.php"> Login</a>';
         }
         else
         {
-            $message = 'Welcome '.$phpro_username.'<a class ="login" href="logout.php"> Log Out </a>' ;
+            $message = '<div class = "alogin">Welcome, '.$phpro_username.' <a href="logout.php"> Log Out </a></div>' ;
         }
     }
     catch (Exception $e)
     {
         /*** if we are here, something is wrong in the database ***/
-        $message = '<a class ="login" href="registration.php">Register</a> <a class ="login" href="login.php"> Login</a>';
+        $message = '<a class ="login" href="registration.php">Register </a>  <a class ="login" href="login.php"> Login</a>';
     }
 }
 
@@ -76,17 +76,13 @@ else
 
 	<body translate="no" >
 
-<?php echo '<div class="login">'.$message.'</div>'; ?>
+<?php echo $message; ?>
+<br/>
 <img src="images/OSU.jpg"/>
 	<form class="form-wrapper" action="submit_search.php" onsubmit="search()">
 		<input type="text" id="search" placeholder="Search for a facility" required>
 		<input type="submit" value="go" id="submit">
 	</form>
-	<script>
-		function search() {
-		alert("The form was submitted");
-		}
-	</script>
 	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
