@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+
+<body>
+
+
+
+<div id="facilities_form">
+	<div>
+		<h1>Details of facility</h1> 
+		<h4>Please fill out the required details</h4> 
+	</div>
+		<p id="failure">Oops...form not submitted</p>  
+		<p id="success">Your facility was added successfully. Thank you!</p>
+
+		   <form method="post" action="/">
+			<div>
+		      <label for="name_facility">
+		      	<span class="required">What services or facilities did you find? *</span> 
+		      	<input type="text" id="name_facility" name="name_facility" value="" placeholder="Ovens, Computers etc." required="required" tabindex="1" autofocus="autofocus" />
+		      </label> 
+			</div>
+		       <div>		          
+		      <label for="building_name">
+		      <span class ="required">Where did you find it? * </span>
+			      <select id="building_name" name="building_name" tabindex="4">   
+			         <option value="general">Name of the building</option>
+			         <option value="general">Dresse Labs</option>  
+			         <option value="general"> Caldwell Labs </option>
+			         <option value="general">Smith Labs</option>  
+			         <option value="general"> Physics Research Building</option>
+			      </select>
+		      </label>
+			</div>
+			<div>
+		      <label for="building_exactplace">
+		      	<span class="required">Where exactly did you find it in the building? *</span>
+		      	<input type="building_exactplace" id="building_exactplace" name="building_exactplace" value="" placeholder="Room no., what floor" tabindex="3" required="required" />
+		      </label>  
+			</div>
+			
+			<div>		          
+		      <label for="other_info">
+		       <span>Anything else you want to add:</span>
+		      	<textarea id="other_info" name="other_info" placeholder="" tabindex="5"></textarea> 
+		      </label>  
+			</div>
+			<div>		           
+		      <button name="submit" type="submit" id="submit" >Submit</button> 
+			</div>
+		   </form>
+
+	</div>
+</body>
+</html>
