@@ -86,23 +86,29 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+	margin-top:20px;
+	margin-left:10px;
 }
 
 input[type=text]:focus {
-    width: 100%;
+    width: 75%;
 }
 </style>
 	</head>
-
+<div id="header">
+<div id="searchAlign">
 	<body translate="no" >
 <?php echo $message; ?>
-<div id="searchAlign">
-<img class ="inner" src="images/OSUthumb.png">
-	<form action="./search.php" id="searchForm" method="get" >
-		<input type="text" id="search" name="q"  value="<?php echo $_GET['q']; ?>">
-		
+
+
+<a href="index.php"><img class ="inner" src="images/OSUthumb.png"></a>
+	<form action="./search.php" id="searchForms" method="get" >
+		<input type="text" id="search" name="q" size="50" value="<?php echo $_GET['q']; ?>">
 	</form>
+
+	</div>
 	<br />
+	
 	<?php
 	$q = $_GET['q'];
 	$terms= explode(" ", $q);
@@ -150,14 +156,13 @@ input[type=text]:focus {
 		
 	}
 	else{
-		echo "No results found for ".$q.". Would you like to add some details? <a href=\"add_facilities.php\">click here</a><br/>";
+		echo "<h4 class=\"footer\">No results found for ".$q.". Would you like to add some details? <a href=\"add_facilities.php\">click here</a></h4><br/>";
 	}
 	//disconnet
 	mysql_close();
 	?>
-	
 	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-</div>
+	</div>
 
 	</body>
 </html>

@@ -79,6 +79,7 @@ else
 <?php echo $message; ?>
 <br/>
 <img class ="main" src="images/OSU.jpg"/>
+
 	<form class="form-wrapper" action="./search.php" id="searchForm" method="get">
 		<input type="text" id="search" placeholder="Search for a facility" name="q" />
 		<input type="submit" value="Go" id="submit">

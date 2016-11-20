@@ -25,7 +25,7 @@ if(!isset($_SESSION['user_id'])){
 		   <form method="post" action="facility.php">
 			<div>
 		      <label for="name_facility">
-		      	<span class="required">What services or facilities did you find? *</span> 
+		      	<span class="required">What services or facilities did you find and who can access it?*</span> 
 		      	<input type="text" id="name_facility" name="name_facility" value="" placeholder="Ovens, Computers etc." required="required"/>
 		      </label> 
 			</div>
@@ -57,7 +57,7 @@ echo $select;
 			
 			<div>		          
 		      <label for="other_info">
-		       <span>Addition Details:</span>
+		       <span>Any Accessibility issue for specially abled:</span>
 		      	<textarea id="other_info" name="other_info" placeholder=""></textarea> 
 		      </label>  
 			</div>

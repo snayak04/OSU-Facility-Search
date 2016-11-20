@@ -39,6 +39,7 @@ else
     /*** if we are here the data is valid and we can insert it into database ***/
     $phpro_username = filter_var($_POST['phpro_username'], FILTER_SANITIZE_STRING);
     $phpro_password = filter_var($_POST['phpro_password'], FILTER_SANITIZE_STRING);
+	$phpro_name = $_POST['fname']." ".$_POST['lname'];
 
     /*** now we can encrypt the phpro_password ***/
     $phpro_password = sha1( $phpro_password );
@@ -65,11 +66,12 @@ else
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         /*** prepare the insert ***/
-        $stmt = $dbh->prepare("INSERT INTO phpro_users (phpro_username, phpro_password ) VALUES (:phpro_username, :phpro_password )");
+        $stmt = $dbh->prepare("INSERT INTO phpro_users (phpro_username, phpro_password, phpro_name ) VALUES (:phpro_username, :phpro_password, :phpro_name )");
 
         /*** bind the parameters ***/
         $stmt->bindParam(':phpro_username', $phpro_username, PDO::PARAM_STR);
         $stmt->bindParam(':phpro_password', $phpro_password, PDO::PARAM_STR, 40);
+		 $stmt->bindParam(':phpro_name', $phpro_name, PDO::PARAM_STR);
 
         /*** execute the prepared statement ***/
         $stmt->execute();
