@@ -122,11 +122,22 @@ a.login{
 .form-wrapper #submit::-moz-focus-inner {
 	border: 0;
 }
-img{
+img.main{
 	float:center;
 	margin-top:5%;
 	margin-left:9%;
 	margin-bottom:-3%;
 	width:40%;
 	height:20%;
+}
+#searchAlign{
+	float:left;
+
+}
+img.inner{
+	float:left;
+	margin-left:10px;
+	margin-bottom:10px;
+	width:100px;
+	height:100px;
 }

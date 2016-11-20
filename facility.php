@@ -18,7 +18,8 @@ try {
 $building_name=$_POST['building_name'];
 $building_exactplace=$_POST['building_exactplace'];
 $other_info=$_POST['other_info'];
-$sql = "INSERT INTO facility (name_facility, building_name, building_exactplace, other_info) VALUES ('$name_facility', '$building_name', '$building_exactplace', '$other_info')";
+$user_name = $_SESSION['user_id'];
+$sql = "INSERT INTO facility (name_facility, building_name, building_exactplace, other_info, user_name) VALUES ('$name_facility', '$building_name', '$building_exactplace', '$other_info', '$user_name')";
     // use exec() because no results are returned
     $conn->exec($sql);
     echo 'Thanks for the input!"<meta http-equiv="Refresh" content="1;url=http://www.crediblesystem.com/hackathon2016">';

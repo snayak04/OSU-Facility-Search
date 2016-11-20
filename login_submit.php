@@ -8,13 +8,13 @@ if(isset( $_SESSION['user_id'] ))
 {
     $message = 'Users is already logged in';
 }
-/*** check that both the username, password have been submitted ***/
+/*** check that both the username, password have been submitted 
 if(!isset( $_POST['phpro_username'], $_POST['phpro_password']))
 {
     $message = 'Please enter a valid username and password';
-}
+}***/
 /*** check the username is the correct length ***/
-elseif (strlen($_POST['phpro_username']) < 4)
+if (strlen($_POST['phpro_username']) < 4)
 {
     $message = 'Incorrect Length for Username';
 }

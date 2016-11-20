@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['user_id'])){
-    die("Please login");
+    die("Please login<meta http-equiv=\"Refresh\" content=\"2;url=http://www.crediblesystem.com/hackathon2016/login.php\">");
 }
 ?>
 <!DOCTYPE html>
