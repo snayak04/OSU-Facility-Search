@@ -72,6 +72,26 @@ else
 		<link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
 		<title>OSU - Facility Search</title>
 		<link rel="stylesheet" href="css/style1.css">
+		<style>
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('http://findicons.com/files/icons/1389/g5_system/32/toolbar_find.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
 	</head>
 
 	<body translate="no" >
@@ -79,8 +99,8 @@ else
 <div id="searchAlign">
 <img class ="inner" src="images/OSUthumb.png">
 	<form action="./search.php" id="searchForm" method="get" >
-		<input type="text" id="search" name="q" size="50" value="<?php echo $_GET['q']; ?>">
-		<input type="submit" value="Go" id="submit">
+		<input type="text" id="search" name="q"  value="<?php echo $_GET['q']; ?>">
+		
 	</form>
 	<br />
 	<?php
