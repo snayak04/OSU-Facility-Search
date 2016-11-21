@@ -1,4 +1,4 @@
-# hackathon2016
+#First hackathon project, group project with 3 people!
 
 Why did we decide to do this?
 
